@@ -1,36 +1,37 @@
 {
+
 	"declare": {
 		"prefix": "declare",
 		"body": [
 		  "#include <bits/stdc++.h>",
+		  "#define loop(i, a, b, c) for(__typeof(a) i=(a), _b=(b), _c=(c); i<_b; i+=_c)",
+		  "#define loopeach(i, a, b) for(__typeof(a) i = (a), _b=(b); i <_b;++i)",
+		  "#define loopback(i,a,b,c) for(__typeof(a) i=(a),_b=(b), _c=(c); i>=_b; i-=_c)",
+		  "#define REP(i,a) for(int i=0,_a=(a); i<_a; i++)",
+		  "#define pii pair<int, int>",
+		  "#define pll pair<long long, long long>",
 		  "#define ll long long",
-		  "#define read(n) int n; cin >> n;",
-		  "#define readln(a,n) int n; cin >> n; int a[n]; for(int i = 0; i < n; ++i) cin >> a[i];",
+		  "#define read(n) int n; cin >> n",
+		  "#define read(a,n) int n; cin >> n; int a[n]; loopeach(i, 0, n) cin >> a[i];",
+		  "#define vii vector<pair<int, int>> ",
+		  "#define vll vector<pair<long long, long long>> ",
 		  "#define each(it,a) for(__typeof(a.begin()) it = a.begin(); it != a.end(); ++it)",
+		  "#define DEBUG(x) { cout << #x << \" = \"; cout << (x) << endl; }",
+		  "#define PR(a,n) {loop(_, 0,n, 1) cout << a[_] << ' '; cout << endl; }",
+		  "#define PR0(a,n) { cout << #a << \" = \"; REP(_,n) cout << a[_] << ' '; cout << endl; }",
 		  "#define sqr(x) ((x) * (x)) ",
 		  "#define ff first",
 		  "#define ss second ",
-		  "#define oo 2147483647",
-		  "typedef std::pair<int, int> pii;",
-		  "typedef std::pair<long long, long long> pll;",
-		  "typedef std::vector<std::pair<int, int>> vii;",
-		  "typedef std::vector<std::pair<long long, long long>> vll;",
+		  "#define oo 1e99",
 		  "using namespace std;",
-		  "inline void PR(int a[], int n){",
-		  "    for (int i = 0; i < n; ++i)",
-		  "        cout << a[i] << \" \";",
-		  "    cout << endl;",
-		  "}",
 		  "int main() {",
 		  "    ios_base::sync_with_stdio(false);",
 		  "    cin.tie(nullptr);",
 		  "    cout.tie(nullptr);",
 		  "",
-		  "    ",
+		  "    freopen(\"DEBUG.INP\", \"r\", stdin);",
+		  "    freopen(\"DEBUG.OUT\", \"w\", stdout);",
 		  "",
-		  "    return 0;",
-		  "}",
-		  "    ",
 		  ""
 		],
 		"description": "declare"
@@ -67,8 +68,8 @@
 		  "        if (a[mid] == x)",
 		  "            return mid;",
 		  "        if (a[mid] > x)",
-		  "            return bs(a, l, mid - 1, x);",
-		  "        return bs(a, mid + 1, r, x);",
+		  "            return (a, l, mid - 1, x);",
+		  "        return (a, mid + 1, r, x);",
 		  "    }",
 		  "    return -1;",
 		  "}"
@@ -76,6 +77,7 @@
 		"description": "binary_search"
 	  },
 
+     
 	  "prime": {
 		"prefix": "prime",
 		"body": [
@@ -95,8 +97,9 @@
 		"description": "prime"
 	  },
 
+	  
 	  "sieve": {
-		"prefix": "sieve",
+		"prefix": "",
 		"body": [
 		  "//Prime sieve",
 		  "const long long max_length = 1e7 + 9;",
@@ -116,6 +119,7 @@
 		"description": "sieve"
 	  },
 
+      //Factorial with dynamic programming
 	  "giaithua": {
 		"prefix": "",
 		"body": [
@@ -133,8 +137,9 @@
 		"description": "giaithua"
 	  },
 
+
 	  "matrix": {
-		"prefix": "matrix",
+		"prefix": "",
 		"body": [
 		  "template<typename T> ",
 		  "class Matrix {",
@@ -213,5 +218,7 @@
 		  "};"
 		],
 		"description": "matrix"
-	  }
+	  },
+
+      
 }
